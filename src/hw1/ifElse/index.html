@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+<!-- подключаем стили Mocha, для отображения результатов -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/2.1.0/mocha.css">
+  <!-- подключаем библиотеку Mocha -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/2.1.0/mocha.js"></script>
+
+  <!-- настраиваем Mocha: предстоит BDD-тестирование -->
+<script>
+    mocha.setup('bdd');
+</script>
+  <!-- подключаем chai -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/chai/2.0.0/chai.js"></script>
+  <!-- в chai есть много всего, выносим assert в глобальную область -->
+<script>
+    var assert = chai.assert;
+</script>
+<script src="task1.js">  </script>
+<script src="task2.js">  </script>
+<script src="task3.js">  </script>
+<script src="task4.js">  </script>
+<script src="task5.js">  </script>
+
+</head>
+<body>
+
+
+     <!-- в элементе с id="mocha" будут результаты тестов -->
+<div id="mocha"></div>
+<!-- запустить тесты! -->
+<script>
+  
+  function sum(a,b) {
+    return a+b;
+  }
+    describe("IfElse/task1",function() {
+        it("Задание 1: нечетное а= 5  и  б=10",function() {
+            assert.equal(sum(5,10),15);
+
+    });
+});
+function umn(a,b) {
+    return a*b;
+  }
+    describe("IfElse/task1",function() {
+        it("Задание 1: четное а= 5  и  б=10",function() {
+            assert.equal(umn(4,5),20);
+
+    });
+});
+
+
+
+
+
+
+function f2(x,y) {
+
+    if (x>0 && y>0) {
+     d=1;
+   }
+return d;
+};
+
+describe("IfElse/task2",function() {
+    it("Задание 2: x=14 y=8  => 1 четверть",function() {
+        assert.equal(f2(14,8),"1");
+
+});
+});
+
+
+
+
+
+
+function tas3(a,b,c) {
+
+return b+c;
+};
+
+describe("IfElse/task3",function() {
+    it("Задание 3: Ввод: -8, 1,10   => А ",function() {
+        assert.equal(tas3(-8,1,10),11);
+
+});
+});
+
+
+
+
+
+describe("IfElse/task4",function() {
+    it("Задание 4: Ввод: 2, 1,3   => А ",function() {
+        assert.equal(tas4(2,1,2),8);
+
+});
+});
+
+
+
+
+
+describe("IfElse/task5",function() {
+    it("Задание 5: Ввод 91  => А ",function() {
+        assert.equal(rate(91),"A");
+  
+
+});
+});
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<script>
+  mocha.run();
+</script>
+
+</body>
+</html>

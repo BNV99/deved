@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>What are HTML imports and how do they work</title>
+
+
+</script>
+
+
+$.get("loops/import.html",function(data){
+  $(data).find('div.text').appendTo("#includedContent1");
+  $(data).find('div.table').appendTo("#includedContent2");
+});
+</script>
+
+
+  </head>
+  
+ 
+  <body>
+
+
+    <div id="includedContent1"></div>
+    <div id="includedContent2"></div>
+
+</body>
+
+</html>

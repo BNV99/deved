@@ -1,6 +1,11 @@
+
 "use strict"
-  var a=94;
+  var b=94;
   var res;
+
+
+
+  function rate(a) {
   if (a<=19) {
       res='F'
           }
@@ -20,5 +25,14 @@
   if (a>89) {
       res='A'
           }
+        
+return res;
+        }
 
-console.log (res);
+console.log (rate(b));
+
+
+
+
+window.rate=rate;
+

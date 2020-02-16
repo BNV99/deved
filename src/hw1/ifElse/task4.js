@@ -1,8 +1,11 @@
 "use strict"
-  var a=6;
-  var b=54;
-  var c=2;
+  var a1=6;
+  var b1=54;
+  var c1=2;
   var res;
+
+
+  function tas4 (a,b,c){
 
   var m=Number(a)*Number(b)*Number(c);
   var n=Number(a)+Number(b)+Number(c);
@@ -12,4 +15,13 @@
   else {
     res=n+3;
   }
-console.log (res);
+
+  return res;
+}
+console.log (tas4());
+
+
+
+window.tas4=tas4;
+
+

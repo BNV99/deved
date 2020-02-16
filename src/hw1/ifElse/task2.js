@@ -1,7 +1,8 @@
 "use strict"
   var x=14;
-  var y=-8;
+  var y=8;
   var res="Четверть"+" ";
+  function 
    if (x>0 && y>0) {
      console.log (res+"1");
    }
