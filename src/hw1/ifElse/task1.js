@@ -1,11 +1,19 @@
  "use strict"
-  var a=6;
-  var b=8;
-  var res=a-(-b);
+
+ let a=6;
+  let b=8;
+ function taski1(a,b) {
+  let res=0;
+
   if (a%2==0) {
       res=a*b;
-      console.log (res);
+     
   }
   else {
-  console.log (res);
+    res=a+b;
+  
   }
+return res;
+}
+
+console.log (taski1(a,b));

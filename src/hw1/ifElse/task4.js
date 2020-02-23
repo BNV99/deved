@@ -1,14 +1,14 @@
 "use strict"
-  var a1=6;
-  var b1=54;
-  var c1=2;
-  var res;
+  let a1=6;
+  let b1=54;
+  let c1=2;
+  
 
 
-  function tas4 (a,b,c){
-
-  var m=Number(a)*Number(b)*Number(c);
-  var n=Number(a)+Number(b)+Number(c);
+  function taski4(a1,b1,c1) {
+  let res;
+  var m=Number(a1)*Number(b1)*Number(c1);
+  var n=Number(a1)+Number(b1)+Number(c1);
   if (m>n) {
       res=m+3;
   }
@@ -18,10 +18,7 @@
 
   return res;
 }
-console.log (tas4());
 
 
 
-window.tas4=tas4;
-
-
+console.log(taski4(a1,b1,c1));

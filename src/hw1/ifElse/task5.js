@@ -1,38 +1,33 @@
 
 "use strict"
-  var b=94;
-  var res;
+  let a6=20;
+  let res5;
 
 
 
-  function rate(a) {
-  if (a<=19) {
-      res='F'
+  function taski5(a5) {
+
+  if (a5<=19) {
+      res5='F'
           }
-  if (a<=39 && a>19) {
-      res='E'
+  if (a5<=39 && a5>19) {
+      res5='E'
           }
-  if (a<=59 && a>39) {
-      res='D'
+  if (a5<=59 && a5>39) {
+      res5='D'
           }
-  if (a<=74 && a>59) {
-      res='C'
+  if (a5<=74 && a5>59) {
+      res5='C'
           }
-  if (a<=89 && a>74) {
-      res='B'
+  if (a5<=89 && a5>74) {
+      res5='B'
           }
 
-  if (a>89) {
-      res='A'
+  if (a5>89) {
+      res5='A'
           }
         
-return res;
+return res5;
         }
 
-console.log (rate(b));
-
-
-
-
-window.rate=rate;
-
+console.log(taski5(a6));

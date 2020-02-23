@@ -1,15 +1,18 @@
 "use strict"
-  var a=3;
-  var b=45;
-  var c=6;
-  var res=0;
-  if (a>0) {
-      res=Number(a);
+  let a3=3;
+  let b3=16;
+  let c3=-10;
+  let res1=0;
+
+  function taski3(a3,b3,c3) {
+  if (a3>0) {
+      res1=Number(a3);
   }
-  if(b>0) {
-    res=res+Number(b);
+  if(b3>0) {
+    res1=res1+Number(b3);
   }
-  if(c>0) {
-    res=res+Number(c);
+  if(c3>0) {
+    res1=res1+Number(c3);
   }
-console.log (res);
+return res1;
+  }

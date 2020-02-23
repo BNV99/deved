@@ -1,78 +1,60 @@
 <!DOCTYPE html>
-<html>
-	<head>
-        <title>Calculator</title>
-        <link rel="stylesheet" type="text/css" href='web.css' />
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+<!-- подключаем стили Mocha, для отображения результатов -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/2.1.0/mocha.css">
+  <!-- подключаем библиотеку Mocha -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/2.1.0/mocha.js"></script>
+
+
+<script>
+    mocha.setup('bdd');
+</script>
+  <!-- подключаем chai -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/chai/2.0.0/chai.js"></script>
+  <!-- в chai есть много всего, выносим assert в глобальную область -->
+<script>
+    var assert = chai.assert;
+</script>
+<script src="h.js">  </script>
+<script src="index(1).html">  </script>
+
+</head>
+<body>
+
+
+     <!-- в элементе с id="mocha" будут результаты тестов -->
+<div id="mocha"></div>
+<!-- запустить тесты! -->
+<script>
+  
+ 
+
+
+
+describe("Test1",function() {
+    it("Задание 3: Ввод: -8, 1,10   => А ",function() {
+        assert.equal(NumPressed(-8,1),-7);
+
+});
+});
+
+
+
+</script>
 
 
 
 
-     <body>
-        <div class="my_calc">
-            <form name="calc">
-              <input type="text" class="my_calc__display" name="ReadOut"  value="0"  />
-            </form>
-            <div class="row">
-              
-              
-              
-              <div class="button del"  
-               onclick="clean()">AC</div>
-              
-              
-           <div class="button plus_minus">+/-</div>
-              <div class="button persent">%</div>
-              <div class="button divide" onclick="Operation('/')">/</div>
-              
-              
-              
-              
-              
-            </div>
-            
-            
-            
-            <div class="row">
-              <div class="button seven" onclick="NumPressed('7')">7</div>
-              
-              
-              <div class="button eight" onclick="NumPressed('8')">8</div>
-              <div class="button nine" onclick="NumPressed('9')">9</div>
-              <div class="button multiple" onclick="Operation('*')">*</div>
-            </div>
-            
-            
-            
-            <div class="row">
-              <div class="button four" onclick='nsert("4")'>4</div>
-              <div class="button five" onclick="NumPressed('5')">5</div>
-              <div class="button six" onclick="NumPressed('6')">6</div>
-              <div class="button minus" onclick="Operation('-')">-</div>
-              
-              
-              
-              
-            </div>
-            <div class="row">
-              <div class="button one" onclick="NumPressed('1')">1</div>
-              <div class="button two" onclick="NumPressed('2')">2</div>
-              <div class="button three" onclick="NumPressed('3')">3</div>
-              <div class="button plus" 
-       onclick="Operation('+')">+</div>
-            </div>
-            
-            
-            
-            <div class="row">
-              <div class="big_button zero" onclick="NumPressed('0')">0</div>
-              <div class="button dot" onclick="NumPressed('.')">.</div>
-              <div class="button equally" onclick="Operation('=')">=</div>
-            </div>
-          </div>
 
-        </body>   
+<script>
+  mocha.run();
+</script>
 
-
-        <script src="calc.js"></script> 
-        
-    </head>    
+</body>
+</html>

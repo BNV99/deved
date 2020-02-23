@@ -1,17 +1,22 @@
 "use strict"
-  var x=14;
-  var y=8;
-  var res="Четверть"+" ";
-  function 
+  let x=14;
+  let y=8;
+  let chetv='';
+  function taski2(x,y) {
    if (x>0 && y>0) {
-     console.log (res+"1");
+    chetv="1";
    }
    if (x<0 && y>0) {
-     console.log (res+"2");
+    chetv="2";
    }
     if (x<0 && y<0) {
-      console.log (res+"3");
+      chetv="3";
     }
      if (x>0 && y<0) {
-       console.log (res+"4");
+       chetv="4";
      }
+
+     return chetv
+    }
+
+    console.log(taski2(x,y));

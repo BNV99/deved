@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <title>Calculator</title>
+        <link rel="stylesheet" type="text/css" href='web.css' />
+
+
+
+
+     <body>
+        <div class="my_calc">
+            <form name="calc">
+              <input type="text" class="my_calc__display" name="ReadOut"  value="0"  />
+            </form>
+            <div class="row">
+              
+              
+              
+              <div class="button del"  
+               onclick="clean()">AC</div>
+              
+              
+           <div class="button plus_minus">+/-</div>
+              <div class="button persent">%</div>
+              <div class="button divide" onclick="Operation('/')">/</div>
+              
+              
+              
+              
+              
+            </div>
+            
+            
+            
+            <div class="row">
+              <div class="button seven" onclick="NumPressed('7')">7</div>
+              
+              
+              <div class="button eight" onclick="NumPressed('8')">8</div>
+              <div class="button nine" onclick="NumPressed('9')">9</div>
+              <div class="button multiple" onclick="Operation('*')">*</div>
+            </div>
+            
+            
+            
+            <div class="row">
+              <div class="button four" onclick='nsert("4")'>4</div>
+              <div class="button five" onclick="NumPressed('5')">5</div>
+              <div class="button six" onclick="NumPressed('6')">6</div>
+              <div class="button minus" onclick="Operation('-')">-</div>
+              
+              
+              
+              
+            </div>
+            <div class="row">
+              <div class="button one" onclick="NumPressed('1')">1</div>
+              <div class="button two" onclick="NumPressed('2')">2</div>
+              <div class="button three" onclick="NumPressed('3')">3</div>
+              <div class="button plus" 
+       onclick="Operation('+')">+</div>
+            </div>
+            
+            
+            
+            <div class="row">
+              <div class="big_button zero" onclick="NumPressed('0')">0</div>
+              <div class="button dot" onclick="NumPressed('.')">.</div>
+              <div class="button equally" onclick="Operation('=')">=</div>
+            </div>
+          </div>
+
+        </body>   
+
+
+        <script src="h.js"></script> 
+        
+    </head>    
