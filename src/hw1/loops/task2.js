@@ -1,33 +1,35 @@
 "use strict"
-   var b=2;
-   var i;
-   var c;
+ let b7=5;
 
-   function  tas(a){
-   if (a==1){
-    c=console.log("Нейтральный элемент");
+ let c;
+
+   function taskSost(a9) {
+     let i;
+   if (a9==1){
+    c="Нейтральный элемент";
   }
-    if (a==2) {
-    c="P";
+    if (a9==2) {
+    c="Prostoe";
   }
-     if(a%2==0 & a!=2) {
-       c=console.log("Составное")
+     if(a9%2==0 & a9!=2) {
+       c="Sostavnoe";
      }
     else {
-      for(i=2;i<a;i++) {
-        if (a%i==0) {
-         c= console.log("Составное");
+      for(i=2;i<a9;i++) {
+
+        if (a9%i==0) {
+         c= "Sostavnoe";
 
         }
         else {
-          c= console.log("Простое");
-          break;
+          c= "Prostoe";
+          
+          
         }
-
 
       }
     }
     return c;
    }
-   console.log (tas(b));
+   console.log (taskSost(5));
 

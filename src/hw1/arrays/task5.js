@@ -1,14 +1,13 @@
 
-let num = [10,5,3,6,0,-5];
+let num = [10,5,3,6,9];
 
 function sumnechet(n){
-    // let n1=num[0];
+  
     let suma=0;
     i=0;
-    // if (i!=1; i<num.length; i=i+2)
-    //     n1=
+  
 
-    for (i=0;i<n.length; i=i+2) {
+    for (i=1;i<n.length; i=i+2) {
         suma=suma+n[i]
 
     }

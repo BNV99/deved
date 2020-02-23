@@ -1,17 +1,17 @@
 "use strict"
 
-  var res=0;
-  var i;
-  var a=99;
+  let resu=0;
+  let i;
+  let a=99;
 
-  function t1(n){
+  function t41(n){
   for(i=1;i<=n;i++) {
     if(i%2==0);
-   res+=i;
+   resu+=i;
 
     }
 
-    return res;
+    return resu;
   }
-   console.log(t1(a));
+   
    
