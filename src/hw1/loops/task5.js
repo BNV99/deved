@@ -1,20 +1,29 @@
 "use strict"
-    var a=56;
-    var sum=0;
-    var n;
+    let au=56;
 
-    while (a>0) {
-      n=a%10
+
+
+    function SumChZ(au) {
+    let sum5=0;
+    let n;
+
+
+
+    while (au>0) {
+      n=au%10
       if (n==0) {
-        a=a/10;
+        au=au/10;
       }
       else {
         n=Math.floor(n);
-        a=a/10;
-        sum=sum+n;
+        au=au/10;
+        sum5=sum5+n;
 
       }
 
     }
 
-console.log(sum);
+    return  sum5;
+  }
+
+console.log(SumChZ(au));
