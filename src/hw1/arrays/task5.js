@@ -1,5 +1,5 @@
 
-let num = [10,5,3,6,9];
+let num5 = [10,5,3,6,9];
 
 function sumnechet(n){
   
@@ -14,4 +14,4 @@ function sumnechet(n){
     return suma;
 
 }
-console.log(sumnechet(num));
+console.log(sumnechet(num5)); 

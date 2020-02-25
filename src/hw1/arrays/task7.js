@@ -1,13 +1,13 @@
-let masiv=[7,3,3,6,3,4,3]
+let masiv7=[7,3,3,6,3,4,3]
 
 
- let i=0;
 
 
  // Возвращает длину массива
 
 function dlinaMas(n) {
    let k=0;
+   let i=0;
 for(i=0;  n[i]!=undefined ; i++) {
 
 k=i;
@@ -21,7 +21,7 @@ return k;
 function niche(m){
 let d1=dlinaMas(m);
 let sum=0;
-
+let i;
 
 
 for (i=0;i<=d1;i++)
@@ -35,4 +35,4 @@ for (i=0;i<=d1;i++)
 return sum;
 }
 
-console.log(niche(masiv));
+console.log(niche(masiv7));

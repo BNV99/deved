@@ -1,8 +1,8 @@
 
-let num = [10,5,3,6];
+let num1 = [10,5,3,6];
 
 
-function maxi(n)  {
+function maxi(num)  {
 let max=num[0];
 for (i=1; i<num.length; ++i ) {
  if (max<num[i]){
@@ -14,4 +14,4 @@ for (i=1; i<num.length; ++i ) {
 return max;
 }
 
-console.log(maxi(num));
+console.log(maxi(num1));

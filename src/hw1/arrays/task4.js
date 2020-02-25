@@ -1,8 +1,8 @@
 
-let num = [2,10,5,3,6,0,-5,-10];
+let num4 = [2,10,5,3,6,0,-5,-10];
 
 
-function max1(n)  {
+function max1(num)  {
 let max1=num[0];
 let na=0;
 for (i=0; i<num.length; ++i ) {
@@ -16,4 +16,4 @@ for (i=0; i<num.length; ++i ) {
 return na;
 }
 
-console.log(max1(num));
+console.log(max1(num4));

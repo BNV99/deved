@@ -1,8 +1,8 @@
 
-let num = [10,5,3,6,0,-5,-10];
+let num3 = [10,5,3,6,0,-5,-10];
 
 
-function mini1(n)  {
+function mini1(num)  {
 let min1=num[0];
 let na=0;
 for (i=0; i<num.length; ++i ) {
@@ -16,4 +16,4 @@ for (i=0; i<num.length; ++i ) {
 return na;
 }
 
-console.log(mini1(num));
+console.log(mini1(num3));

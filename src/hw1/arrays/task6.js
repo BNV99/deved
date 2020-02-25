@@ -1,4 +1,4 @@
-let masiv=[7,3,3,6,3,4,5,3]
+let masiv1=[7,3,3,6,3,4,5,3]
 
 
  let i=0;
@@ -30,4 +30,4 @@ for (i=0;i<=d1/2;i++)
 return m;
 }
 
-console.log(revers(masiv));
+console.log(revers(masiv1));

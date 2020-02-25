@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+<!-- подключаем стили Mocha, для отображения результатов -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/2.1.0/mocha.css">
+  <!-- подключаем библиотеку Mocha -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/2.1.0/mocha.js"></script>
+
+  <!-- настраиваем Mocha: предстоит BDD-тестирование -->
+<script>
+    mocha.setup('bdd');
+</script>
+  <!-- подключаем chai -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/chai/2.0.0/chai.js"></script>
+  <!-- в chai есть много всего, выносим assert в глобальную область -->
+<script>
+    var assert = chai.assert;
+</script>
+<script src="task1.js">  </script>
+<script src="task2.js">  </script>
+<script src="task3.js">  </script>
+<script src="task4.js">  </script>
+<script src="task5.js">  </script>
+<script src="task6.js">  </script>
+<script src="task7.js">  </script>
+<script src="task8.js">  </script>
+<script src="task9.js">  </script>
+<script src="task10.js">  </script>
+
+</head>
+<body>
+
+
+     <!-- в элементе с id="mocha" будут результаты тестов -->
+<div id="mocha"></div>
+<!-- запустить тесты! -->
+<script>
+ 
+
+
+
+describe("arrays/Task1",function() {
+    it("Задание  1:  ",function() {
+        assert.equal(mas([8,32,6,10,2]),2);
+});
+it("Задание  1: ",function() {
+        assert.equal(mas([8]),8);
+});
+it("Задание  1:  ",function() {
+        assert.equal(mas([8,32,6,10,2]),2);
+});
+});
+
+
+
+
+describe("arrays/Task2",function() {
+    it("Задание 5: Ввод 91  => А ",function() {
+        assert.equal(maxi([8,32,6,10,2]),32);
+});
+it("Задание 5: Ввод 91  => А ",function() {
+        assert.equal(maxi([8,32,6,10,2,212]),212);
+});
+it("Задание 5: Ввод 91  => А ",function() {
+        assert.equal(maxi(4),undefined);
+});
+});
+
+
+
+
+
+describe("arrays/Task3",function() {
+    it("Задание 3",function() {
+        assert.equal(mini1(2),0);
+});
+it("Задание 3",function() {
+        assert.equal(mini1([8,32,6,10,2,212]),4);
+});
+it("Задание 3",function() {
+        assert.equal(mini1({undefined}),0);
+});
+});
+
+
+
+
+describe("arrays/Task4",function() {
+    it("Задание 4",function() {
+        assert.equal(max1([8,32,6,10,2,212]),5);
+});
+it("Задание 4",function() {
+        assert.equal(max1(50),0);
+});
+it("Задание 4",function() {
+        assert.equal(max1([515,8,32,6,10,2,212]),0);
+});
+});
+
+
+
+describe("arrays/Task5",function() {
+    it("Задание 5",function() {
+        assert.equal(sumnechet([8,32,6,10,2,212]),254);
+});
+it("Задание 5",function() {
+        assert.equal(sumnechet(50),0);
+});
+it("Задание 5",function() {
+        assert.equal(sumnechet([515,8,32,6,10,2,212]),16);
+});
+});
+
+
+
+describe("arrays/Task6",function() {
+    it("Задание 6",function() {
+        assert.deepEqual(revers([8,32,6]),[ 6, 32, 8 ]);
+});
+it("Задание 6",function() {
+        assert.deepEqual(revers([7,3,3,6,3,4,5,3]),[
+  3, 5, 4, 3,
+  6, 3, 3, 7
+]);
+});
+it("Задание 6",function() {
+        assert.deepEqual(revers([515,8,32,6,10,2,212]),[ 212, 2, 10, 6, 32, 8, 515 ]);
+});
+});
+
+
+describe("arrays/Task7",function() {
+    it("Задание 7",function() {
+        assert.deepEqual(niche([8,32,6]),0);
+});
+it("Задание 7",function() {
+        assert.deepEqual(niche([7,3,3,6,3,4,5,3]),24);
+});
+it("Задание 7",function() {
+        assert.deepEqual(niche([515,8,32,6,10,2,212]),515);
+});
+});
+
+
+
+describe("arrays/Task8",function() {
+    it("Задание 8",function() {
+        assert.deepEqual(ress([8,32,6]),[ 8, 32, 6 ]);
+});
+it("Задание 8",function() {
+        assert.deepEqual(ress([7,3,3,6,3,4,5,3]),[ 3, 4, 5, 3, 7, 3, 3, 6 ]);
+});
+it("Задание 8",function() {
+        assert.deepEqual(ress([515,8,32,6,10,2,212]),[ 515, 8, 32, 6, 10, 2, 212 ]);
+});
+});
+
+
+
+
+
+describe("arrays/Task9",function() {
+    it("Задание 9",function() {
+        assert.deepEqual(Bubble([8,32,6]),[ 8, 32, 6 ]);
+});
+it("Задание 9",function() {
+        assert.deepEqual(Select([7,3,3,6,3,4,5,3]),[ 3, 3, 3, 3, 4, 5, 6, 7 ]);
+});
+it("Задание 9",function() {
+        assert.deepEqual(Insert([515,8,32,6,10,2,212]),[ 2, 6, 8, 10, 32, 212, 515 ]);
+});
+});
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<script>
+  mocha.run();
+</script>
+
+</body>
+</html>

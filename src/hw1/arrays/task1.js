@@ -1,8 +1,8 @@
-let num = [10,5,3,6];
+let num = [10,5,3,0,8,6];
 
 
 
-function mas(n){
+function mas(num){
 let min=num[0];
 for (i=1; i<num.length; ++i ) {
  if (min>num[i]){
@@ -13,4 +13,6 @@ for (i=1; i<num.length; ++i ) {
 }
 return min;
 }
-console.log(mas(num));
+console.log(mas([8,32,6,10,2]));
+
+// console.log(mas(num));

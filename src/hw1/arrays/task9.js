@@ -3,12 +3,12 @@ let m = [1, 26, 43, 4, 10, 63, 7, 28, 9, 5];
 
 
 
-function Bubble(n){
+function Bubble(m){
 
 
-for (let i = 0; i < n.length; i++) {
+for (let i = 0; i < m.length; i++) {
     let m_min = m[i];
-    for (let j = i + 1; j < n.length-1; j++) {
+    for (let j = i + 1; j < m.length-1; j++) {
         if (m[j] < m_min) {
             let mm = m[i];
             m_min = m[j];

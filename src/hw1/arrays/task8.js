@@ -1,23 +1,8 @@
 let masiv = [1, 2, 3, 4]
 
 
-let i = 0;
 
 
-// // Возвращает длину массива
-
-// function dlinaMas(n) {
-//     let k = 0;
-//     for (i = 0; n[i] != undefined; i++) {
-
-//         k = i;
-//     }
-
-//     return k+1;
-// }
-
-// console.log(dlinaMas(masiv));
-// console.log(masiv.length);
 
 
 function ress(arr){
