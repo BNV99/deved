@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test</title>
+    <!-- подключаем стили Mocha, для отображения результатов -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/2.1.0/mocha.css">
+    <!-- подключаем библиотеку Mocha -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/2.1.0/mocha.js"></script>
+    <!-- настраиваем Mocha: предстоит BDD-тестирование -->
+    <script>
+        mocha.setup('bdd');
+    </script>
+
+    <!-- подключаем chai -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/2.0.0/chai.js"></script>
+    <!-- в chai есть много всего, выносим assert в глобальную область -->
+    <script>
+        var assert = chai.assert;
+    </script>
+
+    <script src="aList.js"></script>
+
+</head>
+<body>
+<!-- в элементе с id="mocha" будут результаты тестов -->
+<div id="mocha"></div>
+<!-- тесты для функций AList-->
+<script>
+    describe('test 1-3', function () {
+        const testarr = new AList([1,2,5,7,8,9,0]);
+
+        
+        
+        it('addEnd', function () {
+            assert.deepEqual(testarr.addEnd(28), [ 1, 2, 5, 7, 8, 9, 28 ]);
+        });
+
+        it('addStart', function () {
+            assert.deepEqual(testarr.addStart(87), [ 87, 1, 2, 5, 7, 8, 9, 28 ]);
+        });
+
+        it('delFirst', function () {
+            assert.deepEqual(testarr.delFirst(), 87);
+        });
+
+
+    });
+    
+    describe('test delEnd', function () {
+        const testarr = new AList([1,2,5,7,8,9]);
+            it('delEnd', function () {
+                assert.deepEqual(testarr.delEnd(), 9)
+            });
+
+        });
+
+        describe('test DelPos', function () {
+        const testarr = new AList([1,2,5,7,8,9]);
+            it('delPos', function () {
+                assert.deepEqual(testarr.delPos(1), 2)
+            });
+        
+
+
+        });
+
+        describe('test get', function () {
+
+        const testarr = new AList([1,2,5,7,8,9]);
+            it('get', function () {
+                assert.deepEqual(testarr.get(1), 2)
+            });
+        });
+
+        describe('test set', function () {
+        const testarr = new AList([1,2,5,7,8,9]);
+            it('set', function () {
+                assert.deepEqual(testarr.set(1,78), [ 1, 78, 5, 7, 8, 9 ])
+            });
+        });
+
+        describe('test toString', function () {
+
+        const testarr = new AList([1,2,5]);
+            it('toString', function () {
+                assert.deepEqual(testarr.toString(), '125')
+            });
+        });
+
+       
+    describe('test min', function () {
+
+        const testarr = new AList([1,2,5]);
+            it('min', function () {
+                assert.deepEqual(testarr.min(),1)
+            });
+        });
+
+
+
+         describe('test max', function () {
+
+        const testarr = new AList([1,2,5]);
+            it('max', function () {
+                assert.deepEqual(testarr.max(),5)
+            });
+        });
+
+    describe('test sort', function () {
+
+        const testarr = new AList([1,2,5,2,4,3]);
+            it('sort', function () {
+                assert.deepEqual(testarr.sort(),[ 1, 2, 2, 3, 4, 5 ])
+            });
+        });
+
+
+    describe('test maxIndex', function () {
+
+        const testarr = new AList([1,2,5]);
+            it('max', function () {
+                assert.deepEqual(testarr.maxIndex(),2)
+            });
+        });
+
+
+     describe('test minIndex', function () {
+
+        const testarr = new AList([1,2,5]);
+            it('minIndex', function () {
+                assert.deepEqual(testarr.minIndex(),0)
+            });
+        });
+    
+    describe('test reserve', function () {
+
+        const testarr = new AList([1,2,5,5,2,6,2]);
+            it('reserve', function () {
+                assert.deepEqual(testarr.reserve(),[ 2, 6, 2, 5, 5, 2, 1 ] )
+            });
+        });
+
+
+     describe('test halfRevers', function () {
+
+        const testarr = new AList([1,2,5,5,2,6,2]);
+            it('halfRevers', function () {
+                assert.deepEqual(testarr.halfRevers(),[ 2, 6, 2, 5, 1, 2, 5 ])
+            });
+        });
+
+
+</script>
+<!-- запустить тесты! -->
+<script>
+    mocha.run();
+</script>
+</body>
+
+</html>
