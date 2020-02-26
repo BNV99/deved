@@ -8,15 +8,42 @@ List.prototype.init = function() {
 }
 
 List.prototype.size = function() {
+    let k=0;
+    let i=0;
+ for(i=0;  arr[i]!=undefined ; i++) {
+ 
+ k=i;
+ }
     
+ return k;
+ }
 }
 
 List.prototype.addStart = function(value) {
+
+    let noarr=[];
+    noarr[0]=value
+    if (let i=1; i<this.size() ; i++) {
+
+        noarr[i]=this.arr[i-1];
+
+    }
     
 }
 
 
 List.prototype.addEnd = function(value) {
+
+    let noarr=[];
+    noarr[i]=value
+    noarr[i]=this.size+1;
+    if (let i=0; i<this.size()-1 ; i++) {
+
+        noarr[i]=this.arr[i];
+
+    }
+
+
     
 }
 
