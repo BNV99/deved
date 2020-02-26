@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+
+  <!-- подключаем стили Mocha, для отображения результатов -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/2.1.0/mocha.css">
+  <!-- подключаем библиотеку Mocha -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/2.1.0/mocha.js"></script>
+
+  <!-- настраиваем Mocha: предстоит BDD-тестирование -->
+  <script>
+    mocha.setup('bdd');
+  </script>
+  <!-- подключаем chai -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/2.0.0/chai.js"></script>
+  <!-- в chai есть много всего, выносим assert в глобальную область -->
+  <script>
+    var assert = chai.assert;
+  </script>
+  <script src="222.js">  </script>
+  
+  
+</head>
+
+<body>
+
+
+  <!-- в элементе с id="mocha" будут результаты тестов -->
+  <div id="mocha"></div>
+  <!-- запустить тесты! -->
+  <script>
+
+    /////////////////////// Задание 1
+
+    describe("Calc    + ", function () {
+      
+      it("Проверка операции сложения", function () {
+        assert.equal(OperSum (5, 10), 15);
+      });
+
+      it("Проверка операции сложения", function () {
+        assert.equal(OperSum (5, 1), 6);
+      });
+
+      it("Проверка операции сложения", function () {
+        assert.equal(OperSum (5, 0.5), 5.5);
+      });
+
+      it("Проверка операции сложения", function () {
+        assert.equal(OperSum (-5, 2), -3);
+      });
+
+      it("Проверка операции сложения", function () {
+        assert.equal(OperSum ( -5 , 6 ), 1);
+      });
+       
+      
+
+    });
+
+    describe("Calc   *   ", function () {
+      
+     
+     
+      it("Проверка операции умножения", function () {
+          assert.equal(OperUmn(4, 6), 24);
+        });
+     it("Проверка операции умножения", function () {
+          assert.equal(OperUmn(4, 0), 0);
+        });
+
+     it("Проверка операции умножения", function () {
+          assert.equal(OperUmn(4, 2.5), 10);
+        });
+
+    it("Проверка операции умножения", function () {
+          assert.equal(OperUmn(4, 0.5), 2);
+        });
+      
+     
+      
+
+    });
+
+
+    describe("Calc   /   ", function () {
+      
+     
+     
+      it("Проверка операции деления", function () {
+          assert.equal(OperDel(4, 2), 2);
+        });
+     it("Проверка операции умножения", function () {
+          assert.equal(OperDel(4, 0), NaN);
+        });
+     it("Проверка операции умножения", function () {
+          assert.equal(OperDel(4, 0.5), 8);
+        });
+     it("Проверка операции умножения", function () {
+          assert.equal(OperDel(89, 0.4), 222.5);
+        });
+     it("Проверка операции умножения", function () {
+          assert.equal(OperDel(4, -2),-2);
+        });
+     it("Проверка операции умножения", function () {
+          assert.equal(OperDel(4, -0.5), -8);
+        });
+      
+
+    });
+
+
+
+    describe("Calc  -   ", function () {
+      
+     
+      
+      it("Проверка операции отнимания", function () {
+          assert.equal(OperMin(6, 1), 5);
+        });
+    it("Проверка операции отнимания", function () {
+          assert.equal(OperMin(6, 1.5), 4.5);
+        });
+    it("Проверка операции отнимания", function () {
+          assert.equal(OperMin(600, 1), 599);
+        });
+    it("Проверка операции отнимания", function () {
+          assert.equal(OperMin(-500, 1), -501);
+        });
+    it("Проверка операции отнимания", function () {
+          assert.equal(OperMin(6, -1), 7);
+        });
+      
+
+    });
+
+    
+
+
+
+
+
+
+
+
+  </script>
+
+
+
+
+
+  <script>
+    mocha.run();
+  </script>
+
+</body>
+
+</html>

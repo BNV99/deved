@@ -4,30 +4,89 @@ let pointBtn = document.getElementById("toc");
 let num = document.querySelectorAll(".button");
 let display = document.getElementById("display");
 let operations = document.querySelectorAll(".operator");
+let ravno= document.getElementById("ravno");
 
-let currentNumber = "0";
+
+let number1=0;
+let number2=0;
+
+
+
+let display.value = "0";
 let newNumber = false;
 let pedingOperation = "";
+
+
+//Принимаем цифры и точку.
 
 num.forEach(enter => {
     enter.addEventListener('click', numClick);
 });
 
 function numClick(event) {
+    
     display.value += event.target.value;
-    console.log("click on number");
+
+
+   
 }
+    
+
+//Принимаем значение равно
+   
+
+// ravno.forEach(enter => {
+//     enter.addEventListener('click', numClickRavno);
+// });
+
+// function numClickRavno(event) {
+//     b= display.value;
+    
+    
+
+
+   
+// }
+    
+
+
+
+
+//принимаем значения операторов
+
+
+operations.forEach(enter => {
+    enter.addEventListener('click', operation);
+});
+
+
+// function numClick1(event) {
+//         if (display!=0) {
+          
+//             number1=display.value;
+//             display.value='';
+//             znak+=display.value;
+//             console.lod (znak);
+//         }
+        
+    
+
+
+
+
+
+
 
 //  num.forEach(enter => {
 //    enter.addEventListener('click', numberPress);
 //  })
 
-for(let i = 0; i < operations.length; i++){
-    let operationBtn = operations[i];
-    operationBtn.addEventListener("click", function(e) {
-        operation(e.target.textContent);
-    });
-}
+// for(let i = 0; i < operations.length; i++){
+//     let operationBtn = operations[i];
+//     operationBtn.addEventListener("click", function(e) {
+//         operation(e.target.textContent);
+//     });
+// }
 
 // clearBtn.addEventListener("click", clear);
 // pointBtn.addEventListener("click", point);
@@ -88,19 +147,24 @@ function point(argument) {
 //     pedingOperation = "";
 // }
 
-function sum(num1, num2) {
+
+
+
+
+
+function OperSum(num1, num2) {
     return (parseFloat(num1) + parseFloat(num2));
 }
 
-function minus(num1, num2) {
+function OperMin(num1, num2) {
     return (parseFloat(num1) - parseFloat(num2));
 }
 
-function multiplication(num1, num2) {
+function OperUmn(num1, num2) {
     return (parseFloat(num1) * parseFloat(num2));
 }
 
-function division(num1, num2) {
+function OperDel(num1, num2) {
     return (parseFloat(num1) / parseFloat(num2));
 };
 
@@ -108,30 +172,3 @@ function division(num1, num2) {
 
 
 
-
-
-// if (a=undefind) {
-//  delenie.addEventListener("click", delit);
-// displayValue.value += event.target.value;
-// }
-// function delit() {
-//   return a/b;
-// }
-
-// function sum() {
-//   return a+b;
-// }
-
-
-// function umn() {
-//   return a*b;
-// }
-
-// function otnim() {
-//   return a-b;
-// }
-
-// delenie.onclick = function() {
-//   retunm a/b
-  
-// 

@@ -103,11 +103,20 @@ body {
 }
 
 .plus_minus,
-.del,
+/* .del, */
 .persent {
     background-color: rgb(65, 64, 64);
 }
 
+
+.del {
+    background-color: rgb(65, 64, 64);
+    /* background-color: rgb(120, 117, 117); */
+    border-radius: 0 20 15 15px;
+    opacity: 0.8;
+    height:70px;
+    width:360px;
+}
 .one,
 .two,
 .three,
@@ -118,8 +127,13 @@ body {
 .eight,
 .nine,
 .zero,
-.dot {
+.dot
+ {
     background-color: rgb(120, 117, 117);
+}
+
+.row .del {
+    flex-basis: 75%;
 }
 
 .equally {
