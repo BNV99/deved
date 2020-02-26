@@ -25,6 +25,8 @@ num.forEach(enter => {
 
 function numClick(event) {
     
+
+    if(   )
     display.value += event.target.value;
 
 
