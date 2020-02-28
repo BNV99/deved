@@ -21,7 +21,7 @@ AList.prototype.init = function ()  {
 
 
 AList.prototype.size = function() {
-    
+
 
     let ind = 0;
     while(this.arr[ind]){
@@ -31,21 +31,23 @@ AList.prototype.size = function() {
 }
 
 
+
+
 AList.prototype.addStart = function(value) {
 
-       
+
         let noarr=[];
-        
+
         let i;
         for (i=1;  i<this.size()+1 ; i++ ) {
-            
-            
-    
+
+
+
             noarr[i]=this.arr[i-1];
-    
-    
+
+
         }
-       
+
         noarr[0]=value;
         return this.arr = noarr;
 }
@@ -55,13 +57,9 @@ AList.prototype.addEnd = function(value) {
 
     let noarr=[];
     this.arr[i]=value;
-
     return this.arr;
-    
-    
+
 }
-
-
 
 
 AList.prototype.delFirst = function() {
@@ -72,14 +70,9 @@ AList.prototype.delFirst = function() {
 
             noarr[i] = this.arr[i+1];
 
-        
-
     }
     this.arr=noarr;
     return posish;
- 
-
-    
 }
 
 
@@ -127,9 +120,6 @@ AList.prototype.get = function(index) {
 
 
 
-
-
-
 AList.prototype.set = function(index, value) {
     for (let i = 0; i < this.size() ; i++) {
         if(i == index){
@@ -148,14 +138,11 @@ AList.prototype.toString = function() {
     return string;
 }
 
-
-
-
 AList.prototype.clear = function() {
     this.array = this.defaultArray;
     return this.array;
 
-    
+
 }
 
 
@@ -164,9 +151,9 @@ AList.prototype.min = function() {
 for (i=1; i<this.size(); ++i ) {
  if (min>this.arr[i]){
    min=this.arr[i];
-   
+
  }
-   
+
 }
 return min;
 }
@@ -178,15 +165,12 @@ AList.prototype.max = function() {
 for (i=1; i<this.size(); ++i ) {
  if (max<this.arr[i]){
    max=this.arr[i];
-   
+
  }
-   
+
 }
 return max;
 }
-
-
-
 
 
 
@@ -203,27 +187,26 @@ AList.prototype.sort = function() {
     }
     return this.arr;
 
-    
-}
 
+}
 
 
 AList.prototype.maxIndex = function() {
 
-    
+
 let max1=this.arr[0];
 let na=0;
 for (i=0; i<this.size(); ++i ) {
  if (max1<this.arr[i]){
     max1=this.arr[i];
    na=i;
-   
+
  }
-   
+
 }
 return na;
 }
-    
+
 
 AList.prototype.minIndex = function() {
     let min1=this.arr[0];
@@ -232,17 +215,12 @@ AList.prototype.minIndex = function() {
      if (min1>this.arr[i]){
         min1=this.arr[i];
        na=i;
-       
+
      }
-       
+
     }
     return na;
     }
-
-    
-   
-    
-
 
 AList.prototype.reserve = function() {
     let d1=this.size()-1;
@@ -255,7 +233,7 @@ AList.prototype.reserve = function() {
     }
     return this.arr;
 
-    
+
 }
 
 AList.prototype.halfRevers = function() {
@@ -270,8 +248,8 @@ AList.prototype.halfRevers = function() {
             this.arr[i] = helpArr[i];
         };
     }
-    
-    
+
+
     else{
         for(i = 0, j = half1+1; i < half1+1 && j < arrM; i++, j++){
             helpArr[i] = this.arr[j];
@@ -281,13 +259,3 @@ AList.prototype.halfRevers = function() {
     }
     return this.arr;
 }
-
-
-
-let newArr = new AList([1, 4, 53, 32,55]);
-// // console.log(newArr.size());
-// console.log(newArr.maxIndex());
-// console.log(newArr.reserve());
-// console.log(newArr.clear());
-
-console.log(newArr.delEnd());

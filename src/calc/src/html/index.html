@@ -3,14 +3,71 @@
 <head>
 	<title>Copy Me</title>
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700,800&display=swap" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<link rel="stylesheet" type="text/scss" href="css/styles.css">
 </head>
 <body>
 
-	@@include('./section1.html')
-	@@include('./section2.html')
+	<div class="my_calc">
+        <form name="calc">
+          <input type="text" class="display" name="ReadOut" id="display" value="0"  />
+        </form>
+        <div class="row">
+           
+          <input type="button" class="clear" id="clear"  value="AC" >
+      <input type="button" id="delenie" value="/"  class="operator"   >
+          
+    
+          
+        </div>
+        
+        
+        
+        <div class="row">
+        <input type="button" value="7" class="button seven">
+          <input type="button" value="8" class="button eight"  >
+         <input type="button" value="9"  class="button nine" >
+        <input type="button" id="umnoj" class="operator"  value="*" >
+        </div>
+        
+        
+        
+        <div class="row">
+          
+          <input type="button" class="button four"  value="4" >
+          <input type="button" class="button five"  value="5" >
+         <input type="button" value="6"  class="button six" >
+        <input type="button" id="minus" class="operator"  value="-" >
+          
+          
+        </div>
+        <div class="row">
+          <input type="button" value="1"  class="button one" >
+          <input type="button" value="2"  class="button two"  >
+         <input type="button" class="button three"  value="3" >
+      <input type="button" value="+"  id="plus" class="operator" >
+          
+          
+        </div>
+        
+        
+        
+        <div class="row">
+           <input type="button" value="0" id="nul"   class="big_button zero" >
+      <!--        <input type="button" class="nul" id="toc" value="0" > -->
+        
+          <input type="button" class="button dot" id="toc" value="." >
+          
+          
+      <input type="button" id="ravno"   value="="  class="ravno" >
+          
+          
+         
+        </div>
+      </div>
+      
 
+        </body>   
 	<!-- Scripts -->
-	<script src="js/index.js"></script>
+	<script src="../js/index.js"></script>
 </body>
 </html>
