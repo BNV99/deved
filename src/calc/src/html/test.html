@@ -22,7 +22,7 @@
   <script>
     var assert = chai.assert;
   </script>
-  <script src="222.js">  </script>
+  <script src="../js/index.js">  </script>
   
   
 </head>
@@ -40,23 +40,23 @@
     describe("Calc    + ", function () {
       
       it("Проверка операции сложения", function () {
-        assert.equal(OperSum (5, 10), 15);
+        assert.equal(Sum(5, 10), 15);
       });
 
       it("Проверка операции сложения", function () {
-        assert.equal(OperSum (5, 1), 6);
+        assert.equal(Sum(5, 1), 6);
       });
 
       it("Проверка операции сложения", function () {
-        assert.equal(OperSum (5, 0.5), 5.5);
+        assert.equal(Sum(5, 0.5), 5.5);
       });
 
       it("Проверка операции сложения", function () {
-        assert.equal(OperSum (-5, 2), -3);
+        assert.equal(Sum(-5, 2), -3);
       });
 
       it("Проверка операции сложения", function () {
-        assert.equal(OperSum ( -5 , 6 ), 1);
+        assert.equal(Sum( -5 , 6 ), 1);
       });
        
       
@@ -68,18 +68,18 @@
      
      
       it("Проверка операции умножения", function () {
-          assert.equal(OperUmn(4, 6), 24);
+          assert.equal(Multiple(4, 6), 24);
         });
      it("Проверка операции умножения", function () {
-          assert.equal(OperUmn(4, 0), 0);
+          assert.equal(Multiple(4, 0), 0);
         });
 
      it("Проверка операции умножения", function () {
-          assert.equal(OperUmn(4, 2.5), 10);
+          assert.equal(Multiple(4, 2.5), 10);
         });
 
     it("Проверка операции умножения", function () {
-          assert.equal(OperUmn(4, 0.5), 2);
+          assert.equal(Multiple(4, 0.5), 2);
         });
       
      
@@ -93,22 +93,22 @@
      
      
       it("Проверка операции деления", function () {
-          assert.equal(OperDel(4, 2), 2);
+          assert.equal(Divide(4, 2), 2);
         });
      it("Проверка операции умножения", function () {
-          assert.equal(OperDel(4, 0), NaN);
+          assert.equal(Divide(4, 0), Infinity);
         });
      it("Проверка операции умножения", function () {
-          assert.equal(OperDel(4, 0.5), 8);
+          assert.equal(Divide(4, 0.5), 8);
         });
      it("Проверка операции умножения", function () {
-          assert.equal(OperDel(89, 0.4), 222.5);
+          assert.equal(Divide(89, 0.4), 222.5);
         });
      it("Проверка операции умножения", function () {
-          assert.equal(OperDel(4, -2),-2);
+          assert.equal(Divide(4, -2),-2);
         });
      it("Проверка операции умножения", function () {
-          assert.equal(OperDel(4, -0.5), -8);
+          assert.equal(Divide(4, -0.5), -8);
         });
       
 
@@ -121,19 +121,19 @@
      
       
       it("Проверка операции отнимания", function () {
-          assert.equal(OperMin(6, 1), 5);
+          assert.equal(Substr(6, 1), 5);
         });
     it("Проверка операции отнимания", function () {
-          assert.equal(OperMin(6, 1.5), 4.5);
+          assert.equal(Substr(6, 1.5), 4.5);
         });
     it("Проверка операции отнимания", function () {
-          assert.equal(OperMin(600, 1), 599);
+          assert.equal(Substr(600, 1), 599);
         });
     it("Проверка операции отнимания", function () {
-          assert.equal(OperMin(-500, 1), -501);
+          assert.equal(Substr(-500, 1), -501);
         });
     it("Проверка операции отнимания", function () {
-          assert.equal(OperMin(6, -1), 7);
+          assert.equal(Substr(6, -1), 7);
         });
       
 
