@@ -1,179 +1,215 @@
+"use strict";
 
-let clean = document.querySelectorAll(".clear"); //берем АС
-let pointBtn = document.querySelectorAll(".toc");  // берем значение точки
-let num = document.querySelectorAll(".button");
-let display = document.getElementById("display");
-let operations = document.querySelectorAll(".operator");
-let ravno= document.querySelectorAll(".ravno");
+var clean = document.querySelectorAll(".clear"); //берем АС
 
-let helpDisplay = "";
+var pointBtn = document.querySelector(".dot"); // берем значение точки
 
-let number1='';
-let number2='';
-let operator='';
-
-let clicked1 = false;
-let clicked2 = true;
+var num = document.querySelectorAll(".button");
+var display = document.getElementById("display");
+var operations = document.querySelectorAll(".operator");
+var ravno = document.querySelectorAll(".ravno");
+var helpDisplay = "";
+var number1 = '';
+var number2 = '';
+var operator = '';
+var clicked1 = false;
+var clicked2 = true;
+var clicked3=false;
 
 display.value = '0';
-let newNumber = false;
-let pedingOperation = "";
-
-
-
-// ПРИНЯТИЕ ЗНАЧЕНИЙ //
+var newNumber = false;
+var pedingOperation = ""; // ПРИНЯТИЕ ЗНАЧЕНИЙ //
 // {
 //Принимаем цифры и точку.
 
-num.forEach(enter => {
-    enter.addEventListener('click', numClick);
+num.forEach(function (enter) {
+  enter.addEventListener('click', numClick);
 });
-operations.forEach(enter => {
-    enter.addEventListener('click', operation);
+operations.forEach(function (enter) {
+  enter.addEventListener('click', operation);
 });
-clean.forEach(enter => {
-    enter.addEventListener('click', clearfunk);
+clean.forEach(function (enter) {
+  enter.addEventListener('click', clearfunk);
 });
-pointBtn.forEach(enter => {
-    enter.addEventListener('click', numClick);
-});
-ravno.forEach(enter => {
-    enter.addEventListener('click', funcRavno);
-});
+// pointBtn.addEventListener('click', point);
 
 
-// }
+ravno.forEach(function (enter) {
+  enter.addEventListener('click', funcRavno);
+}); // }
 
+
+
+
+pointBtn.addEventListener('click', function () {
+  if(display.value.indexOf('.') == -1 && display.value != ''){
+      if(clicked3 == false  && clicked1==false ){
+        console.log('number1 s tochkoi',number1);
+          number1=display.value;
+          number1+= '.';
+          display.value = number1;
+          number1=display.value;
+          // clicked3=true;
+          debugger
+      }
+      else if (clicked3 == false && clicked1==true) {
+
+          // display.value = '0';
+          
+        number2=display.value;
+          number2 += '.';
+        display.value = number2;
+        // number2=display.value;
+      }
+  }
+  
+});
 
 
 function numClick(event) {
-    if (clicked1==false && number1.length < 10) {
+  if (clicked1 == false && number1.length < 10 ) {
+    console.log('Number 1.1 ', number1);
+    
 
-          helpDisplay += event.target.value;
-          number1 = +helpDisplay;
-          display.value = "" + (+helpDisplay);
-          // operators = event.target.value;
+      helpDisplay=display.value;
+    helpDisplay += event.target.value;
+    number1= helpDisplay;
+    display.value = +number1; 
+    // display.value+=helpDisplay;
+    // number1=display.value;
 
+   
 
-      // console.log(number1);
+    
+   
+  } else if (clicked1 == true && number2.length < 10) {
+    console.log(number2);
+    if (number2 ==0 && display.value!='0.') {
+      display.value = '0';
+
+      number2+=display.value;
+      number2+=event.target.value;;
+      display.value=+ number2;
+       console.log('Это число 2',number2)
+       console.log('Это число 1',number1)
     }
+    else {
 
-        else if (clicked1==true && number2.length < 10) {
-            display.value = '0'
-            helpDisplay += event.target.value;
-            number2 = +helpDisplay;
-            display.value= "" + (+helpDisplay);
-            // console.log(number2);
-
-        }
-
+    number2=display.value;
+    number2+=event.target.value;;
+    display.value=+ number2;
+    console.log('Это число 2.1',number2)
+    console.log('Это число 1,лол',number1)
+  }
+  }
 };
+
 
 
 function operation(event) {
-    helpDisplay = '';
+  helpDisplay = '';
+
+  if (number2 != "") {
+    display.value = equal(event.target.value);
     
-    if (number2 != ""){
-      display.value =  equal(event.target.value);
-    }
-    operator = event.target.value;
-    clicked1 = true;
+  }
 
-    console.log(operator);
+  operator = event.target.value;
+  clicked1 = true;
+  console.log(operator);
+  
 }
-
-
-
-
-
 
 function clearfunk(event) {
-    number1 = '';
-    number2 = '';
-    display.value = '0';
-    operator = '';
-    clicked1 = false;
-    clicked2 = true;
-    helpDisplay = '';
-
-
+  number1 = '';
+  number2 = '';
+  display.value = '0';
+  operator = '';
+  clicked1 = false;
+  clicked2 = true;
+  helpDisplay = '';
 }
-
-function point(argument) {
-    let localMemory = display.value;
-    if(newNumber) {
-        localMemory = "0.";
-        newNumber = false;
-    } else{
-        if(localMemory.indexOf(".") === -1){
-            localMemory += ".";
-        }
-    }
-    display.value = localMemory;
-};
-
-
-
 
 
 
 function Sum(number1, number2) {
   return number1 + number2;
-};
+}
+
+;
 
 function Substr(number1, number2) {
   return number1 - number2;
-};
+}
+
+;
 
 function Multiple(number1, number2) {
-  
   return number1 * number2;
-};
+}
+
+;
 
 function Divide(number1, number2) {
   return number1 / number2;
-};
-
-
-
-function equal(operator) {
-  let resultOfOperation;
-  
-  switch (operator) {
-    case '+':
-      resultOfOperation = Sum(number1,number2);
-      break;
-    case '-':
-      resultOfOperation = Substr(number1, number2);
-      break;
-    case '*':
-      resultOfOperation = Multiple(number1, number2);
-      break;
-    case '/':
-      resultOfOperation = Divide(number1, number2);
-      break;
-  };
-  clicked2 = false;
-  number1 = resultOfOperation;
-  number2 = '';
-  return  resultOfOperation;
-
 }
 
-function funcRavno(event)  {
+;
 
+function equal(operator) {
+  var result;
+
+  switch (operator) {
+    case '+':
+      result = Sum(number1, number2);
+      break;
+
+    case '-':
+      result = Substr(number1, number2);
+      break;
+
+    case '*':
+      result = Multiple(number1, number2);
+      break;
+
+    case '/':
+      result = Divide(number1, number2);
+      break;
+  }
+
+  ;
+
+  if (result == Infinity ) {
+    result='Error'
+  }
+  else if (result == undefined ) {
+    result='Error'
+  }
+  else if (result == NaN ) {
+    result='Error'
+  }
+  else if (result == -Infinity ) {
+    result='Error'
+  }
+
+
+  clicked2 = false;
+  number1 = result;
+  number2 = '';
+  return result;
+}
+
+function funcRavno(event) {
   if (number1 === '' || number2 === '') {
     number1 = '';
     number2 = '';
     operator = '';
     display.value = 0;
-  } 
-  
-  else if (number1!='' || number2!=''){
+  } else if (number1 != '' || number2 != '') {
     number1 = +number1;
-    number2 = +number2;
-    // operators=operation();
+    number2 = +number2; // operators=operation();
     // console.log(operators);
+
     display.value = equal(operator);
   }
-};
+}
