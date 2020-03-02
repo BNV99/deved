@@ -5,21 +5,39 @@ let firstname = document.getElementById('firstname');
 let lastname = document.getElementById('lastname');
 let age = document.getElementById('age');
 let myzn = document.querySelectorAll('.text');
-let button = document.querySelectorAll('.button');
+let button1 = document.querySelectorAll('.button');
 let arr = [];
 let Id1=true;
 let newId;
 
 
+button1.forEach(function (enter) {
+enter.addEventListener('click', proverka)});
 
-button.addEventListener('click', function () {
- firstname.value="";
-  lastname.value="";
-  age.value="";
-  id.value="";
-switch   (event)  {
+
+
+
+
+
+
+
+
+
+
+function proverka() {
+
+  let  test1=event.target.value;
+    
+//  firstname.value="";
+//   lastname.value="";
+//   age.value="";
+//   id.value="";
+debugger
+switch   (test1)  {
     case "Create" :
             create();
+            console.log('creat');
+            debugger
             break;
     
     case "Read" :
@@ -35,9 +53,13 @@ switch   (event)  {
               reset();
               break;
 };
-});
+};
+
+
     
 function create() {
+
+    debugger
 };
 
 function read() {
