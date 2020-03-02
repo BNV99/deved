@@ -1,117 +1,95 @@
-module.exports = function List(arr)  {
+module.exports = function lList(arr)  {
 
 
 }
 
-List.prototype.init = function() {
+lList.prototype.init = function() {
 
 }
 
-List.prototype.size = function() {
-    let k=0;
-    let i=0;
- for(i=0;  arr[i]!=undefined ; i++) {
- 
- k=i;
- }
-    
- return k;
- }
+lList.prototype.size = function() {
+  
 }
 
-List.prototype.addStart = function(value) {
+lList.prototype.addStart = function(value) {
 
-    let noarr=[];
-    noarr[0]=value
-    if (let i=1; i<this.size() ; i++) {
-
-        noarr[i]=this.arr[i-1];
-
-    }
+  
     
 }
 
 
-List.prototype.addEnd = function(value) {
+lList.prototype.addEnd = function(value) {
 
-    let noarr=[];
-    noarr[i]=value
-    noarr[i]=this.size+1;
-    if (let i=0; i<this.size()-1 ; i++) {
-
-        noarr[i]=this.arr[i];
-
-    }
-
+   
 
     
 }
 
 
-List.prototype.addPos = function(index,value) {
+lList.prototype.addPos = function(index,value) {
     
 }
 
-List.prototype.delStart = function() {
-    
-}
-
-
-List.prototype.delEnd = function() {
-    
-}
-
-List.prototype.delPos = function(index) {
+lList.prototype.delStart = function() {
     
 }
 
 
+lList.prototype.delEnd = function() {
+    
+}
 
-List.prototype.get = function(index) {
+lList.prototype.delPos = function(index) {
     
 }
 
 
-List.prototype.set = function(index,value) {
+
+lList.prototype.get = function(index) {
     
 }
 
 
-List.prototype.toString = function() {
+lList.prototype.set = function(index,value) {
     
 }
 
 
-List.prototype.clear = function() {
+lList.prototype.toString = function() {
     
 }
 
 
-List.prototype.min = function() {
+lList.prototype.clear = function() {
     
 }
 
 
-List.prototype.max = function() {
+lList.prototype.min = function() {
     
 }
 
 
-List.prototype.sort = function() {
-    
-}
-List.prototype.maxIndex = function() {
-    
-}
-List.prototype.minIndex = function() {
+lList.prototype.max = function() {
     
 }
 
 
-List.prototype.reserve = function() {
+lList.prototype.sort = function() {
+    
+}
+lList.prototype.maxIndex = function() {
+    
+}
+lList.prototype.minIndex = function() {
     
 }
 
-List.prototype.halfRevers = function() {
+
+lList.prototype.reserve = function() {
+    
+}
+
+lList.prototype.halfRevers = function() {
     
 }
