@@ -1,9 +1,24 @@
-module.exports = function lList(arr)  {
+const {List } = require ('../list/list');
+const{Node}=require('../list/Node');
+
+
+
+function lList(arr)  {
+    List.apply(this,arguments);
+    this.defArr=arr;
+    this.root = new Node (arr[0]);
+    this.init();
 
 
 }
 
+
+lList.prototype= Object.create(List.prototype);
+lList.prototype.constructor=lList;
+
+
 lList.prototype.init = function() {
+
 
 }
 

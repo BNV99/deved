@@ -1,4 +1,4 @@
-module.exports = function List(arr)  {
+function List(arr)  {
 
 }
 
@@ -11,20 +11,11 @@ List.prototype.init = function() {
 
 List.prototype.size = function() {
 }
-
 List.prototype.addStart = function(value) {
-
-  
-    
 }
 
 
-List.prototype.addEnd = function(value) {
-
-    
-
-
-    
+List.prototype.addEnd = function(value) { 
 }
 
 
@@ -95,3 +86,5 @@ List.prototype.reserve = function() {
 List.prototype.halfRevers = function() {
     
 }
+
+module.exports= {List: List};
